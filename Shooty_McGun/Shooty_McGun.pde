@@ -10,7 +10,7 @@ PImage[] allFrames = Gif.getPImages(this,"Ground.gif");
 //Player
 PImage[] PlayerFrames = Gif.getPImages(this,"JohnnyGun.gif");
   
- fullScreen();
+ size(1920,1080);
  
  Ground = new Gif(this, "Ground.gif");
  Ground.play();
