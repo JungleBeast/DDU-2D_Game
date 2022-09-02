@@ -17,8 +17,7 @@ PImage[] PlayerFrames = Gif.getPImages(this,"JohnnyGun.gif");
  
  Player = new Gif(this, "JohnnyGun.gif");
  Player.play();
-  
-  wobwob
+
 }
 void draw(){
   clear();
