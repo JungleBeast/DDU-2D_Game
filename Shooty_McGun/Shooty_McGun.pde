@@ -30,7 +30,7 @@ void draw(){
   clear();
 Floor.display();
 Johnny.display();
-  
+
   
   
 }
