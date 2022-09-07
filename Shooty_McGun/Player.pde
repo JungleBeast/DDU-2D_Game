@@ -8,11 +8,16 @@ class Player extends Entity{
 
   void display(){
   image(Player, xposPlayer, yposPlayer); 
-  image(Gun, 630, 780); 
+  imageMode(CENTER);
+  image(Gun, 650, 805); 
+  imageMode(CORNER);
   }
   
       void keyPressed() {
   if (key == 'd')  { xposPlayer = xposPlayer + 50 ; }
 }
-
+void sub(PVector v) {
+  x=x-v.x;
+  y=y-v.y;
+}
 }
