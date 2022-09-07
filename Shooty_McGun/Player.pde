@@ -1,3 +1,5 @@
+
+
 class Player extends Entity{
   
   int xposPlayer = 500;

@@ -1,21 +1,30 @@
-Ground Floor = new Ground();
+import gifAnimation.*;
+
+
+
+
+
+Environment Environment = new Environment();
 Player Johnny = new Player();
 
 
-
-import gifAnimation.*;
 Gif Player;
 Gif Ground;
 PImage Gun;
+PImage Background;
+PImage Background2;
+
+
 
 void setup(){
 frameRate(60);
-//Ground
+//Environment
 PImage[] allFrames = Gif.getPImages(this,"Ground.gif");
-
+Background2 = loadImage("Background2.png");
 //Player
 PImage[] PlayerFrames = Gif.getPImages(this,"JohnnyGun.gif");
 Gun = loadImage("Gun.png");
+
   
  size(1920,1080);
  
@@ -28,7 +37,7 @@ Gun = loadImage("Gun.png");
 }
 void draw(){
   clear();
-Floor.display();
+Environment.display();
 Johnny.display();
 
   
