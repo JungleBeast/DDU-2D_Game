@@ -12,7 +12,6 @@ Gif Player;
 Gif Ground;
 PImage Gun;
 PImage Background;
-PImage Background2;
 
 
 
@@ -20,11 +19,10 @@ void setup(){
 frameRate(60);
 //Environment
 PImage[] allFrames = Gif.getPImages(this,"Ground.gif");
-Background2 = loadImage("Background2.png");
 //Player
 PImage[] PlayerFrames = Gif.getPImages(this,"JohnnyGun.gif");
 Gun = loadImage("Gun.png");
-
+Background = loadImage("Background.png");
  size(1920,1080);
  
  Ground = new Gif(this, "Ground.gif");
