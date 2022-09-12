@@ -18,13 +18,13 @@ class Player extends Entity {
       xposPlayer = xposPlayer + 50 ;
     }
     if (key == 'w') { 
-      yposPlayer = yposPlayer + 20 ;
+      yposPlayer = yposPlayer - 20 ;
     }
     if (key == 'a') { 
       xposPlayer = xposPlayer - 50 ;
     }
     if (key == 's') { 
-      yposPlayer = yposPlayer - 20 ;
+      yposPlayer = yposPlayer + 20 ;
     }
   }
   
