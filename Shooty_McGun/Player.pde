@@ -18,7 +18,7 @@ class Player extends Entity {
       xposPlayer = xposPlayer + 50 ;
     }
     if (key == 'w') { 
-      yposPlayer = yposPlayer - 20 ;
+      yposPlayer = yposPlayer - 100 ;
     }
     if (key == 'a') { 
       xposPlayer = xposPlayer - 50 ;
@@ -27,6 +27,13 @@ class Player extends Entity {
       yposPlayer = yposPlayer + 20 ;
     }
   }
+  
+   void keyReleasedPlayer(){
+    if (key == 'w') {
+     yposPlayer = yposPlayer + 100; 
+    }
+   }
+
   
   
   void sub(PVector v) {
