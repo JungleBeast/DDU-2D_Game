@@ -8,8 +8,13 @@ class Player extends Entity {
 
   void display() {
     image(Player, xposPlayer, yposPlayer); 
+    pushMatrix();
+    PVector mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
+    translate(xposPlayer + 150, yposPlayer + 70);
+    rotate(mouse.heading());
     imageMode(CENTER);
-    image(Gun, xposPlayer + 150, yposPlayer + 70); 
+    image(Gun, 0,0); 
+    popMatrix();
     imageMode(CORNER);
   }
 

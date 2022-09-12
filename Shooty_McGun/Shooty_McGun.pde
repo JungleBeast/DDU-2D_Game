@@ -39,11 +39,8 @@ void draw() {
   Environment.display();
   Johnny.display();
 
-  PVector mouse = new PVector(mouseX, mouseY);
-  PVector center = new PVector(650, 805);
-  mouse.sub(center);
-  translate(650, 805);
-  line(0, 0, mouse.x, mouse.y);
+  
+
 }
 
 void keyPressed() {
