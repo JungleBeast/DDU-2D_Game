@@ -9,7 +9,7 @@ class Player extends Entity {
   void display() {
     image(Player, xposPlayer, yposPlayer); 
     imageMode(CENTER);
-    image(Gun, 650, 805); 
+    image(Gun, xposPlayer + 150, yposPlayer + 70); 
     imageMode(CORNER);
   }
 
