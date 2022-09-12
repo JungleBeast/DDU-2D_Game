@@ -9,7 +9,7 @@ class Player extends Entity {
   void display() {
     image(Player, xposPlayer, yposPlayer); 
     imageMode(CENTER);
-    image(Gun, 650, 805); 
+    image(Gun, xposPlayer + 150, yposPlayer + 70); 
     imageMode(CORNER);
   }
 
@@ -18,15 +18,22 @@ class Player extends Entity {
       xposPlayer = xposPlayer + 50 ;
     }
     if (key == 'w') { 
-      yposPlayer = yposPlayer + 20 ;
+      yposPlayer = yposPlayer - 100 ;
     }
     if (key == 'a') { 
       xposPlayer = xposPlayer - 50 ;
     }
     if (key == 's') { 
-      yposPlayer = yposPlayer - 20 ;
+      yposPlayer = yposPlayer + 20 ;
     }
   }
+  
+   void keyReleasedPlayer(){
+    if (key == 'w') {
+     yposPlayer = yposPlayer + 100; 
+    }
+   }
+
   
   
   void sub(PVector v) {
