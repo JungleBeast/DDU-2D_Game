@@ -15,6 +15,11 @@ class Player extends Entity{
   
       void keyPressed() {
   if (key == 'd')  { xposPlayer = xposPlayer + 50 ; }
+  if (key == 'w')  { yposPlayer = yposPlayer + 20 ; }
+  if (key == 'a')  { xposPlayer = xposPlayer - 50 ; }
+  if (key == 's')  { yposPlayer = yposPlayer - 20 ; }
+
+ 
 }
 void sub(PVector v) {
   x=x-v.x;
