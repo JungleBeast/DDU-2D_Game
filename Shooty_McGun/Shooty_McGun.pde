@@ -14,7 +14,7 @@ Gif Player;
 Gif Ground;
 PImage Gun;
 PImage Background;
-
+PImage TestBullet;
 
 
 void setup() {
@@ -25,6 +25,7 @@ void setup() {
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");
   Gun = loadImage("Gun.png");
   Background = loadImage("Background.png");
+ TestBullet = loadImage("TestBullet.png");
   size(1920, 1080);
 
   Ground = new Gif(this, "Ground.gif");
