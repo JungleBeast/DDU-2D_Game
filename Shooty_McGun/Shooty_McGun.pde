@@ -9,7 +9,7 @@ Player Johnny = new Player();
 
 
 
-
+Gif Hound;
 Gif Player;
 Gif Ground;
 PImage Gun;
@@ -24,6 +24,15 @@ void setup() {
   //Player
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");
   Gun = loadImage("Gun.png");
+  
+  //Enemies
+  //Hound Man
+  PImage[] HoundFrames = Gif.getPImages(this, "HoundMan.gif");
+  
+  
+  
+  
+  
   Background = loadImage("Background.png");
   size(1920, 1080);
 
@@ -38,7 +47,6 @@ void draw() {
   background(255);
   Environment.display();
   Johnny.display();
-
   
 
 }

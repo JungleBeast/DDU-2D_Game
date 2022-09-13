@@ -1,0 +1,9 @@
+class Enemy extends Entity{
+  
+  
+  
+  
+  
+  
+  
+}

@@ -1,0 +1,5 @@
+class ManHound extends Enemy{
+  
+  
+  
+}
