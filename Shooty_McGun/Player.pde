@@ -1,8 +1,6 @@
 class Player extends Entity {
 
-  int xposPlayer = 500;
-  int yposPlayer = 680;
-  //PImage image;
+
   PVector position;
   float direction;
   PVector velocity;
@@ -14,8 +12,8 @@ class Player extends Entity {
 
 // Tegning af player, gun og aiming
   void display() {
-   
     image(Player, xposPlayer, yposPlayer); 
+    
     pushMatrix();
     PVector mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
     translate(xposPlayer + 150, yposPlayer + 70);
@@ -23,14 +21,10 @@ class Player extends Entity {
     imageMode(CENTER);
     image(Gun, 0,0); 
     popMatrix();
+    
     imageMode(CORNER);
-    
-    
-    //bullet
-  image(TestBullet,0,0);
-   
-   
   }
+
 
 // Movement
   void keyPressedPlayer() {

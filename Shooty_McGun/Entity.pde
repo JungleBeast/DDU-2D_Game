@@ -1,7 +1,7 @@
 class Entity{
-float x;
-float y;
 
+int xposPlayer = 500;
+int yposPlayer = 680;
 
 float left;
 float right;

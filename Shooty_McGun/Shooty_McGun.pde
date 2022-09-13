@@ -6,7 +6,7 @@ import gifAnimation.*;
 
 Environment Environment = new Environment();
 Player Johnny = new Player();
-
+Bullet cloneBullet = new Bullet();
 
 
 
@@ -39,7 +39,7 @@ void draw() {
   background(255);
   Environment.display();
   Johnny.display();
-
+  cloneBullet.display();
   
 
 }
