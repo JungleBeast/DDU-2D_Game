@@ -45,18 +45,9 @@ void draw() {
 
 void keyPressed() {
   Johnny.keyPressedPlayer();
-  /*  s =  "key: " + keyCode;
-   switch(keyCode) {
-   case 37: // left 
-   left = true;
-   }*/
 }
 
 void keyReleased() {
   Johnny.keyReleasedPlayer();
-  /*  s =  "key: " + keyCode;
-   switch(keyCode) {
-   case 37: // left 
-   left = true;
-   }*/
+ 
 }
