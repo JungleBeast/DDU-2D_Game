@@ -1,7 +1,7 @@
 class Player extends Entity {
 
   int xposPlayer = 500;
-  int yposPlayer = 735;
+  int yposPlayer = 680;
   PImage image;
   PVector position;
   float direction;
