@@ -21,26 +21,23 @@ float yposBullet;
 void setup() {
   size(1920, 1080);
   frameRate(60);
+  
   //Environment
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   //Player
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");
-  Gun = loadImage("Gun.png");
   Background = loadImage("Background.png");
- TestBullet = loadImage("TestBullet.png");
- 
  //Enemies
   PImage[]HoundFrames = Gif.getPImages(this, "HoundMan.gif");
  
+ Gun = loadImage("Gun.png");
+ TestBullet = loadImage("TestBullet.png");
   size(1920, 1080);
 
   Ground = new Gif(this, "Ground.gif");
   Ground.play();
-
   Player = new Gif(this, "JohnnyGun.gif");
   Player.play();
-  
-  //Enemies
   Enemy = new Gif(this, "HoundMan.gif");
   Enemy.play();
 }
