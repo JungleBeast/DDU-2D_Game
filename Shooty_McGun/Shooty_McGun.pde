@@ -40,7 +40,7 @@ void draw() {
   Environment.display();
   Johnny.display();
   cloneBullet.display();
-  
+  cloneBullet.mousePressed();
 
 }
 
