@@ -19,7 +19,8 @@ Gif HoundMan;
 PImage Gun;
 PImage Background;
 PImage TestBullet;
-
+float xposBullet;
+float yposBullet;
 
 void setup() {
   size(1920, 1080);
@@ -49,7 +50,7 @@ void draw() {
   Environment.display();
   Johnny.display();
   cloneBullet.display();
-  cloneBullet.mousePressed();
+  cloneBullet.Shoot();
   
   Enemy.display();
 
