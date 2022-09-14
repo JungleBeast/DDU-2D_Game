@@ -15,7 +15,8 @@ Gif Ground;
 PImage Gun;
 PImage Background;
 PImage TestBullet;
-
+float xposBullet = 0;
+float yposBullet = 0;
 
 void setup() {
   frameRate(60);
@@ -40,7 +41,7 @@ void draw() {
   Environment.display();
   Johnny.display();
   cloneBullet.display();
-  cloneBullet.mousePressed();
+  cloneBullet.Shoot();
 
 }
 
