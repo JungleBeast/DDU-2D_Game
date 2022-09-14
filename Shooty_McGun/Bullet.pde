@@ -1,6 +1,5 @@
 class Bullet extends Entity{
-  float xposBullet = 0;
-  float yposBullet = 0;
+
   PVector v;
   void display(){
     
@@ -15,7 +14,7 @@ class Bullet extends Entity{
   
   }
   
- void mousePressed(){
+ void Shoot(){
    v = PVector.fromAngle(0.1);
    xposBullet = xposBullet + v.x*2;
    yposBullet = yposBullet + v.y*2;
