@@ -1,11 +1,15 @@
 import gifAnimation.*;
 
+
+
+
+
 Environment Environment = new Environment();
 Player Johnny = new Player();
 Bullet cloneBullet = new Bullet();
 Enemy Enemy = new Enemy();
 
-//wa
+
 Gif Player;
 Gif Ground;
 
@@ -15,8 +19,7 @@ Gif HoundMan;
 PImage Gun;
 PImage Background;
 PImage TestBullet;
-float xposBullet;
-float yposBullet;
+
 
 void setup() {
   size(1920, 1080);
@@ -30,7 +33,7 @@ void setup() {
  TestBullet = loadImage("TestBullet.png");
  
  //Enemies
-  PImage[]HoundFrames = Gif.getPImages(this, "HoundMan.gif");
+ PImage[]HoundFrames = Gif.getPImages(this, "HoundMan.gif");
  
   size(1920, 1080);
 
@@ -39,10 +42,6 @@ void setup() {
 
   Player = new Gif(this, "JohnnyGun.gif");
   Player.play();
-  
-  //Enemies
-  Enemy = new Gif(this, "HoundMan.gif");
-  Enemy.play();
 }
 void draw() {
   clear();
@@ -50,7 +49,7 @@ void draw() {
   Environment.display();
   Johnny.display();
   cloneBullet.display();
-  cloneBullet.Shoot();
+  cloneBullet.mousePressed();
   
   Enemy.display();
 
