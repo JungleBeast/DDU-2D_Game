@@ -5,7 +5,7 @@ Player Johnny = new Player();
 Bullet cloneBullet = new Bullet();
 Enemy Enemy = new Enemy();
 
-
+//wa
 Gif Player;
 Gif Ground;
 
