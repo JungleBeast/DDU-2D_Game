@@ -12,12 +12,17 @@ Bullet cloneBullet = new Bullet();
 
 Gif Player;
 Gif Ground;
+
+//Enemies
+Gif HoundMan;
+
 PImage Gun;
 PImage Background;
 PImage TestBullet;
 
 
 void setup() {
+  size(1920, 1080);
   frameRate(60);
   //Environment
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
@@ -26,6 +31,10 @@ void setup() {
   Gun = loadImage("Gun.png");
   Background = loadImage("Background.png");
  TestBullet = loadImage("TestBullet.png");
+ 
+ //Enemies
+ PImage[]HoundFrames = Gif.getPImages(this, "HoundMan.gif");
+ 
   size(1920, 1080);
 
   Ground = new Gif(this, "Ground.gif");
@@ -41,6 +50,8 @@ void draw() {
   Johnny.display();
   cloneBullet.display();
   cloneBullet.mousePressed();
+  
+  Enemy.display();
 
 }
 
