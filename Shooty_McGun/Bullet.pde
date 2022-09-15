@@ -2,6 +2,9 @@ class Bullet extends Entity{
 
   PVector v;
   PVector mouse;
+  float xposBullet;
+float yposBullet;
+
   void display(){
     
     pushMatrix();
@@ -24,6 +27,8 @@ class Bullet extends Entity{
   }
   
  void Shoot(){
+     mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
+
    v = mouse.copy();
    v.normalize();
  }
@@ -31,8 +36,8 @@ class Bullet extends Entity{
  void updateShoot(){
    if(v== null) return;
   // image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
-   xposBullet = xposBullet + v.x*5;
-   yposBullet = yposBullet + v.y*5;  
+   xposBullet = xposBullet + v.x*20;
+   yposBullet = yposBullet + v.y*20;  
  }
   
   
