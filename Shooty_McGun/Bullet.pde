@@ -9,15 +9,18 @@ class Bullet extends Entity{
   mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
   translate(xposPlayer + 150, yposPlayer + 70);
   rotate(mouse.heading());
-  imageMode(CORNER);
     popMatrix();
     
-      image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
+    
    pushMatrix();
-    translate(xposPlayer + 150, yposPlayer + 70);
-      rotate(mouse.heading());
+    translate(xposPlayer+ xposBullet + 150, yposBullet + yposPlayer +  70);
+    if(v!= null){
+    rotate(v.heading());
+    image(TestBullet,0,0);
+    }
     popMatrix();
-  
+    
+  imageMode(CORNER);
   }
   
  void Shoot(){
@@ -27,9 +30,9 @@ class Bullet extends Entity{
  
  void updateShoot(){
    if(v== null) return;
-   image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
-   xposBullet = xposBullet + v.x*6;
-   yposBullet = yposBullet + v.y*6;  
+  // image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
+   xposBullet = xposBullet + v.x*5;
+   yposBullet = yposBullet + v.y*5;  
  }
   
   
