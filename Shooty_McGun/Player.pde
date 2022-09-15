@@ -6,12 +6,21 @@ class Player extends Entity {
   PVector velocity;
   float jumpSpeed;
   float walkSpeed;
-  float gravity = 5;
+  float gravity = 0.2;
   float ground;
 
 
 // Tegning af player, gun og aiming
   void display() {
+    
+    if(yposPlayer < 680){
+      ySpeedPlayer = ySpeedPlayer + gravity;
+      yposPlayer = yposPlayer + (int)ySpeedPlayer;
+    }else{
+      yposPlayer = 680;
+    }
+    
+    
     image(Player, xposPlayer, yposPlayer); 
     
     pushMatrix();
@@ -32,7 +41,8 @@ class Player extends Entity {
       xposPlayer = xposPlayer + 50 ;
     }
     if (key == 'w') { 
-      yposPlayer = yposPlayer - 100 ;
+      yposPlayer = yposPlayer - 1 ;
+      ySpeedPlayer = -10;
     }
     if (key == 'a') { 
       xposPlayer = xposPlayer - 50 ;
@@ -44,7 +54,7 @@ class Player extends Entity {
   
    void keyReleasedPlayer(){
     if (key == 'w') {
-     yposPlayer = yposPlayer + 100; 
+     //yposPlayer = yposPlayer + 100; 
     }
    }
 
