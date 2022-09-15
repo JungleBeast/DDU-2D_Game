@@ -2,7 +2,6 @@ import gifAnimation.*;
 
 Environment Environment = new Environment();
 Player Johnny = new Player();
-//Bullet cloneBullet = new Bullet();
 Enemy Houndman = new Enemy();
 
 ArrayList<Bullet> particles = new ArrayList<Bullet>();
@@ -57,8 +56,6 @@ for(Bullet b : particles) {
   b.updateShoot();
   b.display();
 }
-  //cloneBullet.updateShoot();
-   // cloneBullet.display();
 
   Houndman.display();
 
@@ -75,7 +72,6 @@ void keyReleased() {
 
 
 void mouseClicked(){
-  //cloneBullet.Shoot();
   println(particles.size());
   Bullet b = new Bullet();
   b.Shoot();
