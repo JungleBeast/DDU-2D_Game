@@ -50,7 +50,7 @@ void draw() {
   Environment.display();
   Johnny.display();
   cloneBullet.display();
-  cloneBullet.Shoot();
+  cloneBullet.updateShoot();
   
   Houndman.display();
 
@@ -63,4 +63,10 @@ void keyPressed() {
 void keyReleased() {
   Johnny.keyReleasedPlayer();
  
+}
+
+
+void mouseClicked(){
+  println(frameCount);
+  cloneBullet.Shoot();
 }
