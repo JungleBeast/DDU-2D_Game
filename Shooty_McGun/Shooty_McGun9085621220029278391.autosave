@@ -11,7 +11,7 @@ Gif Ground;
 //What
 //Enemies
 Gif Enemy;
-//This shit
+
 PImage Gun;
 PImage Background;
 PImage TestBullet;
@@ -21,7 +21,6 @@ float yposBullet;
 void setup() {
   size(1920, 1080);
   frameRate(60);
-  noStroke();
   //Environment
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   //Player
@@ -50,10 +49,9 @@ void draw() {
   background(255);
   Environment.display();
   Johnny.display();
-
+  cloneBullet.display();
   cloneBullet.updateShoot();
-    cloneBullet.display();
-
+  
   Houndman.display();
 
 }
@@ -69,5 +67,6 @@ void keyReleased() {
 
 
 void mouseClicked(){
+  println(frameCount);
   cloneBullet.Shoot();
 }
