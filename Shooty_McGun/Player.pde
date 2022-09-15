@@ -6,7 +6,7 @@ class Player extends Entity {
   PVector velocity;
   float jumpSpeed;
   float walkSpeed;
-  float gravity = 0.2;
+  float gravity = 0.5;
   float ground;
 
 
@@ -40,9 +40,9 @@ class Player extends Entity {
     if (key == 'd') { 
       xposPlayer = xposPlayer + 50 ;
     }
-    if (key == 'w') { 
+    if (key == ' ') { 
       yposPlayer = yposPlayer - 1 ;
-      ySpeedPlayer = -10;
+      ySpeedPlayer = -15;
     }
     if (key == 'a') { 
       xposPlayer = xposPlayer - 50 ;
