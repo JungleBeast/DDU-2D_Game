@@ -21,6 +21,7 @@ float yposBullet;
 void setup() {
   size(1920, 1080);
   frameRate(60);
+  noStroke();
   //Environment
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   //Player
