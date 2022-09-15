@@ -1,23 +1,19 @@
 class Entity{
-float x;
-float y;
 
-float xSpeed = -5;
-
-float xPos = 1920;
-float yPos = 680;
+//Player
+int xposPlayer = 500;
+int yposPlayer = 680;
 
 float left;
 float right;
 float up;
 float down;
 
-  
-void move(){
- rect(xPos, yPos, 50,50);
- 
- xPos = xPos + xSpeed;
 
-  
-}
+//Enemy
+int xPosEnemy = 1920; 
+Float xSpeed;
+
+int yPosEnemy = 740; 
+Float ySpeed;
 }

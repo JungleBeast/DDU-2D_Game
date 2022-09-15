@@ -1,32 +1,18 @@
+
+
 class Player extends Entity {
 
-
-  PVector position;
-  float direction;
-  PVector velocity;
-  float jumpSpeed;
-  float walkSpeed;
-  float gravity = 5;
-  float ground;
+  int xposPlayer = 500;
+  int yposPlayer = 735;
 
 
-// Tegning af player, gun og aiming
   void display() {
     image(Player, xposPlayer, yposPlayer); 
-    
-    pushMatrix();
-    PVector mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
-    translate(xposPlayer + 150, yposPlayer + 70);
-    rotate(mouse.heading());
     imageMode(CENTER);
-    image(Gun, 0,0); 
-    popMatrix();
-    
+    image(Gun, xposPlayer + 150, yposPlayer + 70); 
     imageMode(CORNER);
   }
 
-
-// Movement
   void keyPressedPlayer() {
     if (key == 'd') { 
       xposPlayer = xposPlayer + 50 ;
@@ -40,6 +26,9 @@ class Player extends Entity {
     if (key == 's') { 
       yposPlayer = yposPlayer + 20 ;
     }
+    if (key == ' '){
+      JohnnyDodge.gif;
+    }
   }
   
    void keyReleasedPlayer(){
@@ -48,4 +37,10 @@ class Player extends Entity {
     }
    }
 
+  
+  
+  void sub(PVector v) {
+    x=x-v.x;
+    y=y-v.y;
+  }
 }
