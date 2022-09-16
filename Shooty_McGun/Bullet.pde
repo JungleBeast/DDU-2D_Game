@@ -37,9 +37,9 @@ class Bullet extends Entity{
    xposBullet = Johnny.xposPlayer + 150;
    yposBullet = Johnny.yposPlayer + 70;
      mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
-
    v = mouse.copy();
    v.normalize();
+   
  }
  
  void updateShoot(){
