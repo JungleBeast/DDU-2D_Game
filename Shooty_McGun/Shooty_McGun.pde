@@ -64,9 +64,6 @@ for(Bullet b : particles) {
   b.updateShoot();
   b.display();
 }
-  //cloneBullet.updateShoot();
-   // cloneBullet.display();
-
   Houndman.display();
   Houndman.update();
 
