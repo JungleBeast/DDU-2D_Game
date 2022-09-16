@@ -12,9 +12,10 @@ class Enemy extends Entity{
     image(Enemy, xposEnemy, yposEnemy);
      xposEnemy = xposEnemy -4;
      imageMode(CORNER);
-     if(){
+   //if(){
        
-  }
+ //}
   
   
+}
 }

@@ -3,8 +3,6 @@ PImage Health5; PImage Health4;
 PImage Health3; PImage Health2;
 PImage Health1; PImage Health0;
 
-
-
   PVector position;
   float direction;
   PVector velocity;
@@ -40,6 +38,31 @@ Player(){
     popMatrix();
     
     imageMode(CORNER);
+    
+    if(PlayerHP == 5){
+    image(Health5,0,0);
+    }
+    
+    if(PlayerHP == 4){
+    image(Health3,0,0);
+    }
+    
+    if(PlayerHP == 3){
+    image(Health3,0,0);
+    }
+    
+    if(PlayerHP == 2){
+    image(Health2,0,0);
+    }
+    
+    if(PlayerHP == 1){
+    image(Health1,0,0);
+    }
+    
+    if(PlayerHP == 0){
+    image(Health0,0,0);
+    }
+    
   }
 
 
