@@ -2,11 +2,11 @@ class Bullet extends Entity{
 
   PVector v;
   PVector mouse;
-  float xposBullet;
+float xposBullet;
 float yposBullet;
 
   void display(){
-    
+    if(lifetime>0){
     pushMatrix();
   imageMode(CENTER);
   mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
@@ -22,7 +22,7 @@ float yposBullet;
     image(TestBullet,0,0);
     }
     popMatrix();
-    
+    }
   imageMode(CORNER);
   }
   
@@ -38,6 +38,7 @@ float yposBullet;
   // image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
    xposBullet = xposBullet + v.x*20;
    yposBullet = yposBullet + v.y*20;  
+   lifetime-=1;
  }
   
   
