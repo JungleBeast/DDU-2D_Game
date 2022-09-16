@@ -14,6 +14,8 @@ float down;
 //Bullet
 float lifetime = 200;
 
+float xclone = 0;
+float yclone = 0;
 float xposBullet;
 float yposBullet;
 //Enemy

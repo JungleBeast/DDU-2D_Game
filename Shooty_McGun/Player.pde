@@ -78,6 +78,7 @@ Health0 = loadImage("0.png");
   void keyPressedPlayer() {
     if (key == 'd') { 
       xposPlayer = xposPlayer + 50 ;
+  
     }
     if (key == ' ') { 
       yposPlayer = yposPlayer - 1 ;
@@ -88,6 +89,7 @@ Health0 = loadImage("0.png");
     }
     if (key == 's') { 
       yposPlayer = yposPlayer + 20 ;
+    
     }
   }
   
