@@ -2,10 +2,7 @@ import gifAnimation.*;
 
 Environment Environment = new Environment();
 Player Johnny = new Player();
-<<<<<<< HEAD
 Bullet cloneBullet = new Bullet();
-=======
->>>>>>> e1d7ce9e04000fc90ac4ae7c4891ed32970ba9a3
 Enemy Houndman = new Enemy();
 
 //wa
@@ -55,15 +52,8 @@ void draw() {
   Environment.display();
   Johnny.display();
 
-<<<<<<< HEAD
   cloneBullet.updateShoot();
     cloneBullet.display();
-=======
-for(Bullet b : particles) {
-  b.updateShoot();
-  b.display();
-}
->>>>>>> e1d7ce9e04000fc90ac4ae7c4891ed32970ba9a3
 
   Houndman.display();
 
@@ -80,12 +70,5 @@ void keyReleased() {
 
 
 void mouseClicked(){
-<<<<<<< HEAD
   cloneBullet.Shoot();
-=======
-  println(particles.size());
-  Bullet b = new Bullet();
-  b.Shoot();
-  particles.add(b);
->>>>>>> e1d7ce9e04000fc90ac4ae7c4891ed32970ba9a3
 }
