@@ -14,7 +14,6 @@ float yposBullet;
   rotate(mouse.heading());
     popMatrix();
     
-    lifeSpan = 200;
     
    pushMatrix();
     translate(xposPlayer+ xposBullet + 150, yposBullet + yposPlayer +  70);
@@ -36,9 +35,9 @@ float yposBullet;
  
  void updateShoot(){
    if(v== null) return;
+  // image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
    xposBullet = xposBullet + v.x*20;
    yposBullet = yposBullet + v.y*20;  
-   lifeSpan -= 10;
  }
   
   

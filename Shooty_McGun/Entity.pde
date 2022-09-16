@@ -11,7 +11,6 @@ float right;
 float up;
 float down;
 
-float lifeSpan;
 
 //Enemy
 
