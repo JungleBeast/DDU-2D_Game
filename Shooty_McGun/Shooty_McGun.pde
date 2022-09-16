@@ -20,7 +20,7 @@ PImage Gun;
 PImage Background;
 PImage TestBullet;
 
-float BulletTimer = 30;
+float BulletTimer = 20;
 
 void setup() {
   size(1920, 1080);
@@ -54,8 +54,8 @@ void draw() {
   clear();
   background(255);
   //Timer
-  if(BulletTimer<30){
-  BulletTimer=BulletTimer + 1;
+  if(BulletTimer<20){
+  BulletTimer=BulletTimer + 2;
   }
   Environment.display();
   Johnny.display();
@@ -83,7 +83,7 @@ void keyReleased() {
 
 
 void mouseClicked(){
-  if(BulletTimer >= 30){
+  if(BulletTimer >= 20){
   println(particles.size());
   Bullet b = new Bullet();
   b.Shoot();
