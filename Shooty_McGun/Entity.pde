@@ -11,6 +11,9 @@ float right;
 float up;
 float down;
 
+//Bullet
+float lifetime = 200;
+
 
 //Enemy
 
