@@ -1,12 +1,16 @@
 class Enemy extends Entity{
-  
-  
+
+  //Stats
+  Enemy(){
+    w  =  150;
+    h  =  100;
+  }
   
   void display(){
     imageMode(CENTER);
-    rect(xPosEnemy - 75, yPosEnemy - 50, HitBoxX + 75, HitBoxY + 50);
-    image(Enemy, xPosEnemy, yPosEnemy);
-     xPosEnemy = xPosEnemy -4;
+    rect(xposEnemy - 75, yposEnemy - 50, w , h);
+    image(Enemy, xposEnemy, yposEnemy);
+     xposEnemy = xposEnemy -4;
      imageMode(CORNER);
   }
   

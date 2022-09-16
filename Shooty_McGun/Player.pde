@@ -1,4 +1,8 @@
 class Player extends Entity {
+PImage Health5; PImage Health4;
+PImage Health3; PImage Health2;
+PImage Health1; PImage Health0;
+
 
 
   PVector position;
@@ -8,7 +12,11 @@ class Player extends Entity {
   float walkSpeed;
   float gravity = 0.5;
   float ground;
-
+//Stats
+Player(){
+  w = 50;
+  h = 100;
+}
 
 // Tegning af player, gun og aiming
   void display() {

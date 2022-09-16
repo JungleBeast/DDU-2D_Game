@@ -17,13 +17,28 @@ float lifetime = 200;
 
 //Enemy
 
-int xPosEnemy = 1920; 
+int xposEnemy = 1920; 
 Float xSpeed;
 
-int yPosEnemy = 810; 
+int yposEnemy = 810; 
 Float ySpeed;
 
 //Hitbox
+float w, h;
+
+boolean HitboxIntersect(Player r1, Enemy r2){
+float DistX = abs((r1.xposPlayer+r1.w/2)-(r2.xposEnemy+r2.w/2));
+float DistY = abs((r1.yposPlayer+r1.h/2)-(r2.yposEnemy+r2.h/2));
+float CombinedHalfWidth = r1.w/2+r2.w/2;
+float CombinedHalfHeight = r1.h/2+r2.h/2;
+
+//Check collision on X-Axis
+if (DistX < CombinedHalfWidth){
+if (DistY < CombinedHalfHeight){
+  return true;}}
+  
+return false;}
+
 boolean Collide   = false;
 boolean BuletHit  = false;
 boolean Disappear = false;
