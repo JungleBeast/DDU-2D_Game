@@ -19,6 +19,14 @@ Player(){
 // Tegning af player, gun og aiming
   void display() {
     
+Health5 = loadImage("5.png");
+Health4 = loadImage("4.png");
+Health3 = loadImage("3.png");
+Health2 = loadImage("2.png");
+Health1 = loadImage("1.png");
+Health0 = loadImage("0.png");
+    
+    
     if(yposPlayer < 680){
       ySpeedPlayer = ySpeedPlayer + gravity;
       yposPlayer = yposPlayer + (int)ySpeedPlayer;

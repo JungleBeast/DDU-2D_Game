@@ -36,8 +36,8 @@ class Bullet extends Entity{
  void updateShoot(){
    if(v== null) return;
   // image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
-   xposBullet = xposBullet + v.x*20;
-   yposBullet = yposBullet + v.y*20;  
+   xposBullet = xposBullet + v.x*25;
+   yposBullet = yposBullet + v.y*25;  
    lifetime-=1;
  }
   
