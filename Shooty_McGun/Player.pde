@@ -19,7 +19,7 @@ Player(){
 
 // Tegning af player, gun og aiming
   void display() {
-    
+    if(lifetime>0){
 Health5 = loadImage("5.png");
 Health4 = loadImage("4.png");
 Health3 = loadImage("3.png");
@@ -71,7 +71,7 @@ Health0 = loadImage("0.png");
     if(PlayerHP == 0){
     image(Health0,0,0);
     }
-    
+    }
   }
 
 
@@ -99,5 +99,26 @@ Health0 = loadImage("0.png");
      //yposPlayer = yposPlayer + 100; 
     }
    }
+          void update(){
+         
+         for(int i = Hounds.size() - 1; i>=0 ; i-- ){
+          // println("tjek bullets");
+           Enemy Houndman = Hounds.get(i);
+           println("Afstand fra Monster er!" + dist(xposPlayer, yposPlayer, b.xposEnemy, b.yposEnemy));
+           if(dist(xposPlayer, yposPlayer, b.xposEnemy, b.yposEnemy) < PlayerR){
+             println("Hit HoundMan!!!");
+             PlayerHP = PlayerHP-1;
+           } 
+          }  
+        
+             
+            
+        
+         
+         
+    if(PlayerHP == 0){
+      lifetime = -1;}
+      
+    }
 
 }
