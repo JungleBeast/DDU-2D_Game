@@ -1,21 +1,47 @@
 class Enemy extends Entity{
 
+  boolean BulletHit  = false;
+  
   //Stats
   Enemy(){
-    w  =  150;
-    h  =  100;
+  EnemyR =  150;
   }
   
   void display(){
+    
+    if(lifetime>0){
     imageMode(CENTER);
-    rect(xposEnemy - 75, yposEnemy - 50, w , h);
+    circle(xposEnemy, yposEnemy, EnemyR);
     image(Enemy, xposEnemy, yposEnemy);
-     xposEnemy = xposEnemy -4;
+     xposEnemy = xposEnemy -8;
      imageMode(CORNER);
-   //if(){
+    }
+     
+      
        
- //}
+  }
   
+       void update(){
+         
+         for(int i = particles.size() - 1; i>=0 ; i-- ){
+          // println("tjek bullets");
+           Bullet b = particles.get(i);
+           println("afstand til kuglen er!" + dist(xposEnemy, yposEnemy, b.xposBullet, b.yposBullet));
+           if(dist(xposEnemy, yposEnemy, b.xposBullet, b.yposBullet) < 100){
+             println("Hit HoundMan!!!");
+             particles.remove(b);
+             HoundHP = HoundHP-1;
+           } 
+          }  
+        
+             
+            
+        
+         
+         
+    if(HoundHP == 0){
+      lifetime = -1;}
+      
+    }
   
-}
 }

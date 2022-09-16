@@ -2,6 +2,7 @@ import gifAnimation.*;
 
 Environment Environment = new Environment();
 Player Johnny = new Player();
+Bullet b = new Bullet();
 //Bullet cloneBullet = new Bullet();
 Enemy Houndman = new Enemy();
 
@@ -24,6 +25,7 @@ void setup() {
   size(1920, 1080);
   frameRate(60);
   noStroke();
+  //noFill();
   //Environment
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   //Player
@@ -61,6 +63,7 @@ for(Bullet b : particles) {
    // cloneBullet.display();
 
   Houndman.display();
+  Houndman.update();
 
 }
 
