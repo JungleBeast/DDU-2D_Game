@@ -14,8 +14,8 @@ PImage Health1; PImage Health0;
   float ground;
 //Stats
 Player(){
-  w = 50;
-  h = 100;
+  w = 100;
+  h = 150;
 }
 
 // Tegning af player, gun og aiming
@@ -28,7 +28,7 @@ Player(){
       yposPlayer = 680;
     }
     
-    
+    rect(xposPlayer + 40, yposPlayer + 50, w, h);
     image(Player, xposPlayer, yposPlayer); 
     
     pushMatrix();

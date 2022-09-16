@@ -2,8 +2,7 @@ class Bullet extends Entity{
 
   PVector v;
   PVector mouse;
-float xposBullet;
-float yposBullet;
+
 
   void display(){
     if(lifetime>0){
@@ -19,6 +18,7 @@ float yposBullet;
     translate(xposPlayer+ xposBullet + 150, yposBullet + yposPlayer +  70);
     if(v!= null){
     rotate(v.heading());
+    rect(0 + 50, 0 - 10, 20,20);
     image(TestBullet,0,0);
     }
     popMatrix();
