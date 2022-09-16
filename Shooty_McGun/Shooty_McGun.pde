@@ -2,8 +2,11 @@ import gifAnimation.*;
 
 Environment Environment = new Environment();
 Player Johnny = new Player();
-Bullet cloneBullet = new Bullet();
+//Bullet cloneBullet = new Bullet();
 Enemy Houndman = new Enemy();
+
+ArrayList<Bullet> particles = new ArrayList<Bullet>();
+
 
 //wa
 Gif Player;
@@ -15,8 +18,6 @@ Gif Enemy;
 PImage Gun;
 PImage Background;
 PImage TestBullet;
-float xposBullet;
-float yposBullet;
 
 
 void setup() {
@@ -52,8 +53,12 @@ void draw() {
   Environment.display();
   Johnny.display();
 
-  cloneBullet.updateShoot();
-    cloneBullet.display();
+for(Bullet b : particles) {
+  b.updateShoot();
+  b.display();
+}
+  //cloneBullet.updateShoot();
+   // cloneBullet.display();
 
   Houndman.display();
 
@@ -70,5 +75,9 @@ void keyReleased() {
 
 
 void mouseClicked(){
-  cloneBullet.Shoot();
+  //cloneBullet.Shoot();
+  println(particles.size());
+  Bullet b = new Bullet();
+  b.Shoot();
+  particles.add(b);
 }

@@ -43,12 +43,4 @@ boolean EnemyDead = false;
 //Player
 int PlayerHP = 5;
 boolean PlayerDead = false;
-
-
-//Colliders
-
-
-
-
-
 }
