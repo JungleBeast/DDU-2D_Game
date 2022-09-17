@@ -20,8 +20,12 @@ PImage Gun;
 PImage Background;
 PImage TestBullet;
 
+<<<<<<< HEAD
 float BulletTimer = 30;
 float EnemyTimer  = 0;
+=======
+float BulletTimer = 20;
+>>>>>>> aa6ad2a99508a5fe39d66170698fc13406c444f3
 
 void setup() {
   size(1920, 1080);
@@ -59,8 +63,8 @@ void draw() {
   
   background(255);
   //Timer
-  if(BulletTimer<30){
-  BulletTimer=BulletTimer + 1;
+  if(BulletTimer<20){
+  BulletTimer=BulletTimer + 2;
   }
   if(EnemyTimer<40){
     EnemyTimer = EnemyTimer + 1;
@@ -73,10 +77,13 @@ for(Bullet b : particles) {
   b.updateShoot();
   b.display();
 }
+<<<<<<< HEAD
   //cloneBullet.updateShoot();
    // cloneBullet.display();
 if(EnemyTimer >= 3*60){
   
+=======
+>>>>>>> aa6ad2a99508a5fe39d66170698fc13406c444f3
   Houndman.display();
   Houndman.update();
 }
@@ -94,7 +101,7 @@ void keyReleased() {
 
 
 void mouseClicked(){
-  if(BulletTimer >= 30){
+  if(BulletTimer >= 20){
   println(particles.size());
   Bullet b = new Bullet();
   b.Shoot();
