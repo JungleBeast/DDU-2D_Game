@@ -1,24 +1,53 @@
 class Bullet extends Entity{
 
-  PVector v;
-  void display(){
+  
+  Bullet(){
+    BulletR = 20;
+   
     
+  }
+  
+  PVector v;
+  PVector mouse;
+
+
+  void display(){
+    if(lifetime>0){
     pushMatrix();
   imageMode(CENTER);
-  PVector mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
+  mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
   translate(xposPlayer + 150, yposPlayer + 70);
   rotate(mouse.heading());
-  image(TestBullet,xposBullet,yposBullet); 
-  imageMode(CORNER);
     popMatrix();
-  
+    
+    
+   pushMatrix();
+    translate(xposBullet, yposBullet);
+    if(v!= null){
+    rotate(v.heading());
+    circle(0 + 50, 0, BulletR);
+    image(TestBullet,0,0);
+    }
+    popMatrix();
+    }
+  imageMode(CORNER);
   }
   
  void Shoot(){
-   v = PVector.fromAngle(0.1);
-   xposBullet = xposBullet + v.x*2;
-   yposBullet = yposBullet + v.y*2;
+   xposBullet = Johnny.xposPlayer + 150;
+   yposBullet = Johnny.yposPlayer + 70;
+     mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
+   v = mouse.copy();
+   v.normalize();
    
+ }
+ 
+ void updateShoot(){
+   if(v== null) return;
+  // image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
+   xposBullet = xposBullet + v.x*30;
+   yposBullet = yposBullet + v.y*30;  
+   lifetime-=1;
  }
   
   
