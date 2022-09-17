@@ -24,7 +24,6 @@ class Enemy extends Entity{
        void update(){
          
          for(int i = particles.size() - 1; i>=0 ; i-- ){
-          // println("tjek bullets");
            Bullet b = particles.get(i);
            println("afstand til kuglen er!" + dist(xposEnemy, yposEnemy, b.xposBullet, b.yposBullet));
            if(dist(xposEnemy, yposEnemy, b.xposBullet, b.yposBullet) < 100){

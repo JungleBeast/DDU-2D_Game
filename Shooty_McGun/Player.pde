@@ -95,14 +95,12 @@ Health0 = loadImage("0.png");
   }
   
    void keyReleasedPlayer(){
-    if (key == 'w') {
-     //yposPlayer = yposPlayer + 100; 
+    if (key == 'w') { 
     }
    }
           void update(){
          
          for(int i = Hounds.size() - 1; i>=0 ; i-- ){
-          // println("tjek bullets");
            Enemy Houndman = Hounds.get(i);
            println("Afstand fra Monster er!" + dist(xposPlayer, yposPlayer, b.xposEnemy, b.yposEnemy));
            if(dist(xposPlayer, yposPlayer, b.xposEnemy, b.yposEnemy) < PlayerR){

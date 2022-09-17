@@ -9,17 +9,17 @@ Enemy Houndman = new Enemy();
 ArrayList<Bullet> particles = new ArrayList<Bullet>();
 ArrayList<Enemy> Hounds = new ArrayList <Enemy>();
 
-//wa
+//Gifs
 Gif Player;
 Gif Ground;
-//What
-//Enemies
 Gif Enemy;
-//This shit
+
+//Images
 PImage Gun;
 PImage Background;
 PImage TestBullet;
 
+//Timers
 float EnemyTimer  = 0;
 float BulletTimer = 20;
 
@@ -28,36 +28,32 @@ void setup() {
   size(1920, 1080);
   frameRate(60);
   noStroke();
-  //noFill();
-  //Environment
+  
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
-  //Player
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");
+  PImage[]HoundFrames = Gif.getPImages(this, "HoundMan.gif");
+  
   Gun = loadImage("Gun.png");
   Background = loadImage("Background.png");
   TestBullet = loadImage("TestBullet.png");
- 
- //Enemies
-  PImage[]HoundFrames = Gif.getPImages(this, "HoundMan.gif");
  
   size(1920, 1080);
 
   Ground = new Gif(this, "Ground.gif");
   Ground.play();
-
   Player = new Gif(this, "JohnnyGun.gif");
   Player.play();
-  
-  //Enemies
   Enemy = new Gif(this, "HoundMan.gif");
   Enemy.play();
 }
+
 void draw() {
-  clear();
+clear();
   
    EnemyTimer++; 
   
   background(255);
+  
   //Timer
   if(BulletTimer<20){
   BulletTimer=BulletTimer + 2;
@@ -86,12 +82,9 @@ if(EnemyTimer >= 3*60){
 void keyPressed() {
   Johnny.keyPressedPlayer();
 }
-
 void keyReleased() {
   Johnny.keyReleasedPlayer();
- 
 }
-
 
 void mouseClicked(){
   if(BulletTimer >= 20){
