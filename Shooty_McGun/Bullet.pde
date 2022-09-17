@@ -3,8 +3,6 @@ class Bullet extends Entity{
   
   Bullet(){
     BulletR = 20;
-   
-    
   }
   
   PVector v;
@@ -44,7 +42,6 @@ class Bullet extends Entity{
  
  void updateShoot(){
    if(v== null) return;
-  // image(TestBullet,xposPlayer+ xposBullet + 150,yposBullet + yposPlayer +  70); 
    xposBullet = xposBullet + v.x*30;
    yposBullet = yposBullet + v.y*30;  
    lifetime-=1;

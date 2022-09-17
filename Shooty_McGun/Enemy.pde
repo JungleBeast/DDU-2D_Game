@@ -8,7 +8,6 @@ class Enemy extends Entity{
   }
   
   void display(){
-    
     if(lifetime>0){
     imageMode(CENTER);
     circle(xposEnemy, yposEnemy, EnemyR);
@@ -16,15 +15,11 @@ class Enemy extends Entity{
      xposEnemy = xposEnemy -8;
      imageMode(CORNER);
     }
-     
-      
-       
   }
   
        void update(){
          
          for(int i = particles.size() - 1; i>=0 ; i-- ){
-          // println("tjek bullets");
            Bullet b = particles.get(i);
            println("afstand til kuglen er!" + dist(xposEnemy, yposEnemy, b.xposBullet, b.yposBullet));
            if(dist(xposEnemy, yposEnemy, b.xposBullet, b.yposBullet) < 100){
@@ -33,12 +28,6 @@ class Enemy extends Entity{
              HoundHP = HoundHP-1;
            } 
           }  
-        
-             
-            
-        
-         
-         
     if(HoundHP == 0){
       lifetime = -1;}
       
