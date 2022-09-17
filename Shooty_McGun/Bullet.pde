@@ -3,8 +3,6 @@ class Bullet extends Entity{
   
   Bullet(){
     BulletR = 20;
-   
-    
   }
   
   PVector v;

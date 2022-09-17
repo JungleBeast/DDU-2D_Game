@@ -3,7 +3,6 @@ import gifAnimation.*;
 Environment Environment = new Environment();
 Player Johnny = new Player();
 Bullet b = new Bullet();
-//Bullet cloneBullet = new Bullet();
 Enemy Houndman = new Enemy();
 
 ArrayList<Bullet> particles = new ArrayList<Bullet>();
@@ -28,6 +27,7 @@ void setup() {
   size(1920, 1080);
   frameRate(60);
   noStroke();
+  noFill();
   
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");

@@ -8,7 +8,6 @@ class Enemy extends Entity{
   }
   
   void display(){
-    
     if(lifetime>0){
     imageMode(CENTER);
     circle(xposEnemy, yposEnemy, EnemyR);
@@ -16,9 +15,6 @@ class Enemy extends Entity{
      xposEnemy = xposEnemy -8;
      imageMode(CORNER);
     }
-     
-      
-       
   }
   
        void update(){
@@ -32,12 +28,6 @@ class Enemy extends Entity{
              HoundHP = HoundHP-1;
            } 
           }  
-        
-             
-            
-        
-         
-         
     if(HoundHP == 0){
       lifetime = -1;}
       
