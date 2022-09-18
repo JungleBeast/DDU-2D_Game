@@ -84,7 +84,7 @@ clear();
   BulletTimer=BulletTimer + 2;
   }
   
-if(EnemyTimer < 40){
+if(EnemyTimer <= 40){
   Enemy Houndman = new Enemy();
   Hounds.add(Houndman);
   EnemyTimer = EnemyTimer + 2;

@@ -8,7 +8,7 @@ class Enemy extends Entity{
   }
   
   void display(){
-    if(lifetime>0){
+    if(EnemyLifetime>0){
     imageMode(CENTER);
     circle(Houndman.xposEnemy, Houndman.yposEnemy, EnemyR);
     image(Enemy, Houndman.xposEnemy, Houndman.yposEnemy);
@@ -29,11 +29,11 @@ class Enemy extends Entity{
           }  
     if(HoundHP == 0){
       EnemyDead = true;
-      lifetime = -1;}
+      EnemyLifetime = -1;}
  }   
  void updateDeath(){
    if(EnemyDead = true){
-      lifetime-=1;
+      EnemyLifetime-=1;
   }
  }
 }
