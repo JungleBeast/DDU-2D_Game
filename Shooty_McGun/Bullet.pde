@@ -8,36 +8,37 @@ class Bullet extends Entity{
   PVector mouse1;
 
 
-  void display(){
+void display(){
     if(lifetime>0){
-  pushMatrix();
-  translate(xposPlayer + 150, yposPlayer + 70);
-  imageMode(CENTER);
-  rotate(mouse.heading());
-  mouse = new PVector(mouseX - (xposPlayer + 150) ,mouseY - (yposPlayer + 70));
-  popMatrix();
+     pushMatrix();
+     translate(xposPlayer + 150, yposPlayer + 70);
+     imageMode(CENTER);
+     rotate(mouse.heading());
+     mouse = new PVector(mouseX - (xposPlayer + 150) ,mouseY - (yposPlayer + 70));
+     popMatrix();
     
-    
-   pushMatrix();
-    translate(xposBullet, yposBullet);
-    if(v!= null){
-    rotate(v.heading());
-    circle(0 + 50, 0, BulletR);
-    image(TestBullet,0,0);
-    }
+     pushMatrix();
+     translate(xposBullet, yposBullet);
+        if(v!= null){
+        rotate(v.heading());
+        circle(0 + 50, 0, BulletR);
+        image(TestBullet,0,0);
+        } //if ends
     popMatrix();
-    }
+    } //if ends
+    
   imageMode(CORNER);
-  }
+} //display ends
   
- void Shoot(){
+  
+void Shoot(){
    xposBullet = Johnny.xposPlayer + 150;
    yposBullet = Johnny.yposPlayer + 70;
    mouse = new PVector(mouseX - (xposPlayer + 150),mouseY - (yposPlayer + 70));
    v = mouse.copy();
    v.normalize();
-     Shot1.play();
- }
+   Shot1.play();
+} //Shoot ends
  
  void updateShoot(){
    if(v== null) return;
@@ -47,4 +48,4 @@ class Bullet extends Entity{
  }
  
   
-}
+} //class ends
