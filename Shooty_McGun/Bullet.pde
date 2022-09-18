@@ -1,10 +1,9 @@
 class Bullet extends Entity{
-
+ //Soundfiles
   
   Bullet(){
     BulletR = 20;
   }
-  
   PVector v;
   PVector mouse;
 
@@ -38,10 +37,13 @@ class Bullet extends Entity{
    v = mouse.copy();
    v.normalize();
    
+   
+   
  }
  
  void updateShoot(){
    if(v== null) return;
+   Shot1.play();
    xposBullet = xposBullet + v.x*30;
    yposBullet = yposBullet + v.y*30;  
    lifetime-=1;

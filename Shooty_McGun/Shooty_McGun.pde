@@ -3,6 +3,11 @@ import processing.sound.*;
 
 SoundFile music;
 
+//Gunshots
+SoundFile Shot1;
+SoundFile Shot2;
+SoundFile Shot3;
+
 Environment Environment = new Environment();
 Player Johnny = new Player();
 Bullet b = new Bullet();
@@ -34,6 +39,10 @@ void setup() {
   
  music = new SoundFile(this, "boss baby.mp3");
  music.play();
+ 
+ Shot1 = new SoundFile(this, "Gunshot1.mp3");
+ Shot2 = new SoundFile(this, "Gunshot2.mp3");
+ Shot3 = new SoundFile(this, "Gunshot3.mp3");
   
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");
