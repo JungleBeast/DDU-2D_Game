@@ -17,7 +17,7 @@ class Enemy extends Entity{
     }
   }
   
-       void update(){
+   void update(){
          
          for(int i = particles.size() - 1; i>=0 ; i-- ){
            Bullet b = particles.get(i);

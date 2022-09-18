@@ -28,10 +28,6 @@ float EnemyR;
 
 //Hitbox
 float w, h;
-
-
-
-
 boolean Collide   = false;
 boolean BulletHit  = false;
 boolean Disappear = false;
@@ -43,12 +39,9 @@ int HoundHP       = 3;
 int BirdHP        = 2;
 int SpitterHP     = 3;
 int BruteHP       = 10;
-
-
 int BossHead      = 30;
 int BossRightArm  = 20;
 int BossLeftArm   = 20;
-
 boolean EnemyDead = false;
 
 //Player
