@@ -4,6 +4,7 @@ import processing.sound.*;
 SoundFile music;
 
 //Enemy Sounds
+//Hound
 SoundFile HoundDmg;
 
 //Gunshots
@@ -38,7 +39,7 @@ void setup() {
   size(1920, 1080);
   frameRate(60);
   noStroke();
-  noFill();
+ // noFill();
   
  music = new SoundFile(this, "boss baby.mp3");
  music.play();
@@ -72,52 +73,53 @@ void setup() {
 
 void draw() {
 clear();
-EnemyTimer++; 
-background(255);
-Environment.display();
-Johnny.display();
-
+  
+   EnemyTimer++; 
+  
+  background(255);
+  Environment.display();
+  Johnny.display();
   //Timer
   if(BulletTimer<20){
   BulletTimer=BulletTimer + 2;
-  } //if ends
-
-  if(EnemyTimer <= 40){
+  }
+  
+if(EnemyTimer <= 40){
   Enemy Houndman = new Enemy();
   Hounds.add(Houndman);
   EnemyTimer = EnemyTimer + 2;
-  } //if ends
+  }
+  
+  //Environment.display();
+  //Johnny.display();
 
-
-  for(Bullet b : particles) {
+for(Bullet b : particles) {
   b.updateShoot();
   b.display();
-  } //for ends
-  
-  if(EnemyTimer >= 10){
+}
+
+if(EnemyTimer >= 3*60){
   Houndman.display();
   Houndman.update();
   Houndman.updateDeath();
-  } //if ends
+}
 
-} //Draw ends
+}
 
 
 void keyPressed() {
-Johnny.keyPressedPlayer();
-} //keyPressed ends
-
+  Johnny.keyPressedPlayer();
+}
 void keyReleased() {
-Johnny.keyReleasedPlayer();
-} //keyReleased ends
+  Johnny.keyReleasedPlayer();
+}
 
 void mouseClicked(){
-  
   if(BulletTimer >= 20){
   println(particles.size());
   Bullet b = new Bullet();
   b.Shoot();
   particles.add(b);
   BulletTimer = 0;
-  } //if ends
-} //mouseClicked ends
+  }
+}

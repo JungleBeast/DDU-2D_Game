@@ -19,7 +19,6 @@ float yposBullet;
 float BulletR;
 
 //Enemy
-float rando = random(1-30);
 float EnemyLifetime = 300;
 int xposEnemy = 1920; 
 Float xSpeed;

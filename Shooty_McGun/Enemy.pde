@@ -15,10 +15,6 @@ class Enemy extends Entity{
      xposEnemy = xposEnemy -8;
      imageMode(CORNER);
     }
-      
-      
-    }
-    
   }
   
    void update(){
