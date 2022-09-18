@@ -33,7 +33,6 @@ class Enemy extends Entity{
  }   
  void updateDeath(){
    if(EnemyDead = true){
-      HoundDeath.play();
       lifetime-=1;
   }
  }

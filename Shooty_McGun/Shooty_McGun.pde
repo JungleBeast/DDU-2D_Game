@@ -6,7 +6,6 @@ SoundFile music;
 //Enemy Sounds
 //Hound
 SoundFile HoundDmg;
-SoundFile HoundDeath;
 
 //Gunshots
 SoundFile Shot1;
@@ -52,7 +51,6 @@ void setup() {
   
  //Enemy Sounds
  HoundDmg = new SoundFile(this, "HoundDmg.mp3");
- HoundDeath = new SoundFile(this, "HoundDeath.mp3");
   
   
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
