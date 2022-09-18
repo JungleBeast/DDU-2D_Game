@@ -39,7 +39,7 @@ void setup() {
   size(1920, 1080);
   frameRate(60);
   noStroke();
- // noFill();
+  noFill();
   
  music = new SoundFile(this, "boss baby.mp3");
  music.play();
