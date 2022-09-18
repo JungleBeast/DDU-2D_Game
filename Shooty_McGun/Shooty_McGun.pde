@@ -1,4 +1,7 @@
 import gifAnimation.*;
+import processing.sound.*;
+
+SoundFile music;
 
 Environment Environment = new Environment();
 Player Johnny = new Player();
@@ -19,7 +22,7 @@ PImage Background;
 PImage TestBullet;
 
 //Timers
-float EnemyTimer  = 0;
+float EnemyTimer  = 5;
 float BulletTimer = 5;
 
 
@@ -29,9 +32,12 @@ void setup() {
   noStroke();
  // noFill();
   
+ music = new SoundFile(this, "boss baby.mp3");
+ music.play();
+  
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");
-  PImage[]HoundFrames = Gif.getPImages(this, "HoundMan.gif");
+  PImage[] HoundFrames = Gif.getPImages(this, "HoundMan.gif");
   
   Gun = loadImage("Gun.png");
   Background = loadImage("Background.png");
@@ -59,8 +65,10 @@ clear();
   BulletTimer=BulletTimer + 2;
   }
   
-if(EnemyTimer<40){
-  EnemyTimer = EnemyTimer + 1;
+if(EnemyTimer < 40){
+  Enemy Houndman = new Enemy();
+  Hounds.add(Houndman);
+  EnemyTimer = EnemyTimer + 2;
   }
   
   Environment.display();
@@ -74,6 +82,7 @@ for(Bullet b : particles) {
 if(EnemyTimer >= 3*60){
   Houndman.display();
   Houndman.update();
+  Houndman.updateDeath();
 }
 
 }

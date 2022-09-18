@@ -27,6 +27,12 @@ class Enemy extends Entity{
            } 
           }  
     if(HoundHP == 0){
+      EnemyDead = true;
       lifetime = -1;}
  }   
+ void updateDeath(){
+   if(EnemyDead = true){
+     lifetime-=1;
+  }
+ }
 }
