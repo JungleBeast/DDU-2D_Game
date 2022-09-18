@@ -18,6 +18,7 @@ float lifetime = 200;
 float xposBullet;
 float yposBullet;
 float BulletR;
+
 //Enemy
 int xposEnemy = 1920; 
 Float xSpeed;

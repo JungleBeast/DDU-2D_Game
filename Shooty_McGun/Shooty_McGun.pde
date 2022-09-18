@@ -77,7 +77,8 @@ clear();
    EnemyTimer++; 
   
   background(255);
-  
+  Environment.display();
+  Johnny.display();
   //Timer
   if(BulletTimer<20){
   BulletTimer=BulletTimer + 2;
@@ -89,8 +90,8 @@ if(EnemyTimer < 40){
   EnemyTimer = EnemyTimer + 2;
   }
   
-  Environment.display();
-  Johnny.display();
+  //Environment.display();
+  //Johnny.display();
 
 for(Bullet b : particles) {
   b.updateShoot();
