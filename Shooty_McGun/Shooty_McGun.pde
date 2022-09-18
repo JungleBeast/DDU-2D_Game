@@ -3,6 +3,11 @@ import processing.sound.*;
 
 SoundFile music;
 
+//Enemy Sounds
+//Hound
+SoundFile HoundDmg;
+SoundFile HoundDeath;
+
 //Gunshots
 SoundFile Shot1;
 SoundFile Shot2;
@@ -40,9 +45,15 @@ void setup() {
  music = new SoundFile(this, "boss baby.mp3");
  music.play();
  
+ //Gun Sounds
  Shot1 = new SoundFile(this, "Gunshot1.mp3");
  Shot2 = new SoundFile(this, "Gunshot2.mp3");
  Shot3 = new SoundFile(this, "Gunshot3.mp3");
+  
+ //Enemy Sounds
+ HoundDmg = new SoundFile(this, "HoundDmg.mp3");
+ HoundDeath = new SoundFile(this, "HoundDeath.mp3");
+  
   
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");

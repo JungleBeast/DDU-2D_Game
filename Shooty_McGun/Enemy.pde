@@ -23,6 +23,7 @@ class Enemy extends Entity{
            Bullet b = particles.get(i);
            if(dist(xposEnemy, yposEnemy, b.xposBullet, b.yposBullet) < 100){  
              particles.remove(b);
+             HoundDmg.play();
              HoundHP = HoundHP-1;
            } 
           }  
@@ -32,7 +33,8 @@ class Enemy extends Entity{
  }   
  void updateDeath(){
    if(EnemyDead = true){
-     lifetime-=1;
+      HoundDeath.play();
+      lifetime-=1;
   }
  }
 }

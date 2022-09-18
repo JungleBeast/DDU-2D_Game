@@ -36,14 +36,14 @@ class Bullet extends Entity{
      mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
    v = mouse.copy();
    v.normalize();
-   
+     
+     Shot1.play();
    
    
  }
  
  void updateShoot(){
    if(v== null) return;
-   Shot1.play();
    xposBullet = xposBullet + v.x*30;
    yposBullet = yposBullet + v.y*30;  
    lifetime-=1;
