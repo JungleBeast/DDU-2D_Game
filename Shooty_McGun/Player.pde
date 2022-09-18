@@ -13,7 +13,7 @@ PImage Health1; PImage Health0;
 //Stats
 Player(){
 
-  PlayerR = 150;
+  PlayerR = 200;
   
 }
 
@@ -35,7 +35,7 @@ Health0 = loadImage("0.png");
       yposPlayer = 680;
     }
     
-    circle(xposPlayer + 80, yposPlayer + 100, PlayerR);
+    circle(xposPlayer + 80, yposPlayer + 120, PlayerR);
     image(Player, xposPlayer, yposPlayer); 
     
     pushMatrix();
@@ -102,21 +102,12 @@ Health0 = loadImage("0.png");
          
          for(int i = Hounds.size() - 1; i>=0 ; i-- ){
            Enemy Houndman = Hounds.get(i);
-           println("Afstand fra Monster er!" + dist(xposPlayer, yposPlayer, b.xposEnemy, b.yposEnemy));
-           if(dist(xposPlayer, yposPlayer, b.xposEnemy, b.yposEnemy) < PlayerR){
-             println("Hit HoundMan!!!");
+           if(dist(xposPlayer, yposPlayer, Houndman.xposEnemy, Houndman.yposEnemy) < 200){
              PlayerHP = PlayerHP-1;
            } 
-          }  
-        
-             
-            
-        
-         
-         
+          } 
+          
     if(PlayerHP == 0){
-      lifetime = -1;}
-      
-    }
-
+      lifetime = -1;}   
+ }
 }

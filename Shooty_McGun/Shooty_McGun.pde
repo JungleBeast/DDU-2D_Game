@@ -20,14 +20,14 @@ PImage TestBullet;
 
 //Timers
 float EnemyTimer  = 0;
-float BulletTimer = 20;
+float BulletTimer = 5;
 
 
 void setup() {
   size(1920, 1080);
   frameRate(60);
   noStroke();
-  noFill();
+ // noFill();
   
   PImage[] allFrames = Gif.getPImages(this, "Ground.gif");
   PImage[] PlayerFrames = Gif.getPImages(this, "JohnnyGun.gif");
