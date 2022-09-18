@@ -77,16 +77,10 @@ Health0 = loadImage("0.png");
 
 // Movement
   void keyPressedPlayer() {
-    if (key == 'd') { 
-      xposPlayer = xposPlayer + 50 ;
   
-    }
     if (key == ' ') { 
       yposPlayer = yposPlayer - 1 ;
       ySpeedPlayer = -15;
-    }
-    if (key == 'a') { 
-      xposPlayer = xposPlayer - 50 ;
     }
     if (key == 's') { 
       yposPlayer = yposPlayer + 20 ;
