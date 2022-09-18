@@ -1,6 +1,5 @@
 class Entity{
 
-  
 //Player
 int xposPlayer = 500;
 int yposPlayer = 680;

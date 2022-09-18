@@ -1,14 +1,6 @@
 class Ground{
   
-  
 void display(){
-   image(Ground, 0, 025); 
-    
-    
-    
-    
+   image(Ground, 0, 025);  
   }
-  
-  
-  
 }

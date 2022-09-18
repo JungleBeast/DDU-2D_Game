@@ -1,8 +1,7 @@
 class Bullet extends Entity{
- //Soundfiles
   
   Bullet(){
-    BulletR = 20;
+  BulletR = 20;
   }
   PVector v;
   PVector mouse;
@@ -10,12 +9,13 @@ class Bullet extends Entity{
 
   void display(){
     if(lifetime>0){
-    pushMatrix();
-  imageMode(CENTER);
-  mouse = new PVector(mouseX - (xposPlayer + 150 ),mouseY - ( yposPlayer + 70));
+  pushMatrix();
   translate(xposPlayer + 150, yposPlayer + 70);
+  imageMode(CENTER);
+  mouse = new PVector(mouseX ,mouseY);
   rotate(mouse.heading());
-    popMatrix();
+ // mouse = new PVector(xposPlayer + 150 ,yposPlayer + 70);
+  popMatrix();
     
     
    pushMatrix();
